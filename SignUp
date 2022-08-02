@@ -1,0 +1,14 @@
+package MobileTC;
+import java.util.Iterator;
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.testng.annotations.Test;
+
+       @Test
+		public void SignUp() throws InterruptedException
+		{  
+			driver.findElement(By.xpath("//button[.='SIGN IN']")).click();
+			driver.findElement(By.xpath("//a[.='Sign up']")).click();
+			driver.findElement(By.xpath("//input[@id='myName']")).sendKeys("Chandana");//First Name
+			driver.findElement(By.xpath("//input[@placeholder='Last Name']")).sendKeys("Chandu");//Last Name
