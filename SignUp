@@ -14,3 +14,16 @@ import org.testng.annotations.Test;
 			driver.findElement(By.xpath("//input[@placeholder='Last Name']")).sendKeys("Chandu");//Last Name
 			driver.findElement(By.xpath("//input[@type='date']")).sendKeys("17-09-1999");//DOB
 			driver.findElement(By.xpath("//label[.='Male']/../input[1]")).click();//Male
+			driver.findElement(By.xpath("//label[.='Female']/following-sibling::input")).click();//Female
+			driver.findElement(By.xpath("//input[@type='number']")).sendKeys("6363484560");//MOB
+			driver.findElement(By.xpath("//textarea[@placeholder='Short Bio']")).sendKeys("Hello chandana gowda");//BIO
+			driver.findElement(By.xpath("//button[@type='submit']")).click();//Register
+			driver.switchTo().alert().accept();
+			driver.findElement(By.xpath("//button[.='Sign In']")).click();//Sign in
+			driver.switchTo().alert().accept();
+			driver.findElement(By.id("username")).sendKeys("chandana99@gmail.com");
+			driver.findElement(By.id("password")).sendKeys("Chandu@99");
+			driver.findElement(By.xpath("//a[.='Log In']")).click();
+		}
+	
+	
